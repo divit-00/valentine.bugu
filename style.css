@@ -1,0 +1,39 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body{
+  height:100vh;background:linear-gradient(180deg,#000,#1a0a14);
+  display:flex;justify-content:center;align-items:center;overflow:hidden;color:#fff
+}
+.vignette{position:absolute;inset:0;background:radial-gradient(circle,transparent 0%,#000 75%);z-index:1}
+#rainCanvas{position:absolute;inset:0;z-index:0}
+
+.scene{position:relative;z-index:2;text-align:center;max-width:900px;padding:20px}
+#story{font-size:2.6rem;line-height:1.5;min-height:160px;opacity:.95}
+
+.hidden{display:none}
+
+#memories{margin-top:20px}
+#memories img{
+  width:320px;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.6);
+  animation:fadeIn 1.2s ease
+}
+.caption{margin-top:10px;opacity:.9}
+
+#proposal h2{font-size:2.8rem;margin:30px 0}
+.buttons{display:flex;gap:35px;justify-content:center}
+button{
+  padding:16px 48px;border:none;border-radius:48px;font-size:1.15rem;
+  cursor:pointer;transition:.3s
+}
+#yesBtn{background:#2ecc71;color:#fff}
+#noBtn{background:#e74c3c;color:#fff;position:relative}
+
+#final h1{font-size:3.4rem;animation:fadeUp 2s ease}
+#final p{margin-top:12px;font-size:1.3rem;opacity:.9}
+
+.hearts span{
+  position:absolute;bottom:-20px;font-size:28px;animation:rise 7s linear forwards
+}
+
+@keyframes fadeIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes rise{to{transform:translateY(-110vh);opacity:0}}
