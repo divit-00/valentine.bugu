@@ -15,7 +15,6 @@ body {
     color: white;
 }
 
-/* Cinematic dark edges */
 .vignette {
     position: absolute;
     inset: 0;
@@ -29,9 +28,8 @@ body {
     z-index: 0;
 }
 
-/* START SCREEN */
+/* START */
 #startScreen {
-    position: relative;
     z-index: 3;
     text-align: center;
 }
@@ -46,23 +44,16 @@ body {
     font-size: 1.2rem;
     border: none;
     border-radius: 50px;
-    cursor: pointer;
     background: linear-gradient(135deg, #ff4d6d, #ff8fab);
     color: white;
-    transition: 0.3s;
+    cursor: pointer;
 }
 
-#startBtn:hover {
-    transform: scale(1.08);
-}
-
-/* MAIN SCENE */
 .scene {
     position: relative;
     z-index: 2;
     text-align: center;
     max-width: 900px;
-    padding: 20px;
 }
 
 .hidden {
@@ -71,12 +62,23 @@ body {
 
 #story {
     font-size: 2.6rem;
-    line-height: 1.5;
     min-height: 160px;
-    opacity: 0.95;
 }
 
-/* Proposal */
+/* MEMORIES */
+#memories img {
+    width: 320px;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    animation: fadeIn 1.2s ease;
+}
+
+.caption {
+    margin-top: 12px;
+    opacity: 0.9;
+}
+
+/* PROPOSAL */
 #proposal h2 {
     font-size: 2.8rem;
     margin: 30px 0;
@@ -90,42 +92,37 @@ body {
 
 button {
     padding: 16px 48px;
+    font-size: 1.15rem;
     border: none;
     border-radius: 48px;
-    font-size: 1.15rem;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-#yesBtn {
-    background: #2ecc71;
-    color: white;
-}
+#yesBtn { background: #2ecc71; color: white; }
+#noBtn  { background: #e74c3c; color: white; position: relative; }
 
-#noBtn {
-    background: #e74c3c;
-    color: white;
-    position: relative;
-}
-
-/* Final */
+/* FINAL */
 #final h1 {
     font-size: 3.4rem;
     animation: fadeUp 2s ease;
 }
 
 #final p {
-    margin-top: 12px;
     font-size: 1.3rem;
-    opacity: 0.9;
+    margin-top: 10px;
 }
 
-/* Hearts */
+/* HEARTS */
 .hearts span {
     position: absolute;
     bottom: -20px;
     font-size: 26px;
     animation: rise 7s linear forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes fadeUp {
@@ -134,8 +131,5 @@ button {
 }
 
 @keyframes rise {
-    to {
-        transform: translateY(-110vh);
-        opacity: 0;
-    }
+    to { transform: translateY(-110vh); opacity: 0; }
 }
