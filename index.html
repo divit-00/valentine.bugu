@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Final Boss Valentine 💘</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Audio -->
+<audio id="rain" loop>
+  <source src="rain.mp3" type="audio/mpeg">
+</audio>
+<audio id="thunder">
+  <source src="thunder.mp3" type="audio/mpeg">
+</audio>
+<audio id="music">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="vignette"></div>
+<canvas id="rainCanvas"></canvas>
+
+<div class="scene">
+  <h1 id="story"></h1>
+
+  <!-- Memories -->
+  <div id="memories" class="hidden">
+    <img id="memoryImg" src="memory1.jpg" alt="Memory">
+    <p class="caption">Every memory whispered your name.</p>
+  </div>
+
+  <!-- Proposal -->
+  <div id="proposal" class="hidden">
+    <h2>Will you be my Valentine? 💘</h2>
+    <div class="buttons">
+      <button id="yesBtn">YES ❤️</button>
+      <button id="noBtn">NO 💔</button>
+    </div>
+  </div>
+
+  <!-- Final -->
+  <div id="final" class="hidden">
+    <h1>She said YES 💍</h1>
+    <p>From storms to forever.</p>
+  </div>
+</div>
+
+<div class="hearts"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
