@@ -7,16 +7,10 @@
 </head>
 <body>
 
-<!-- Audio -->
-<audio id="rain" loop>
-    <source src="rain.mp3" type="audio/mpeg">
-</audio>
-<audio id="thunder">
-    <source src="thunder.mp3" type="audio/mpeg">
-</audio>
-<audio id="music">
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
+<!-- AUDIO -->
+<audio id="rain" loop src="rain.mp3"></audio>
+<audio id="thunder" src="thunder.mp3"></audio>
+<audio id="music" src="music.mp3"></audio>
 
 <div class="vignette"></div>
 <canvas id="rainCanvas"></canvas>
@@ -29,20 +23,31 @@
 
 <!-- MAIN SCENE -->
 <div class="scene hidden">
+
+    <!-- STORY -->
     <h1 id="story"></h1>
 
+    <!-- MEMORIES -->
+    <div id="memories" class="hidden">
+        <img id="memoryImg" src="memory1.jpg">
+        <p class="caption">Every memory whispered your name.</p>
+    </div>
+
+    <!-- PROPOSAL -->
     <div id="proposal" class="hidden">
-        <h2>Will you be my Valentine? 💘</h2>
+        <h2>Will you be my Valentine? AMU💘</h2>
         <div class="buttons">
             <button id="yesBtn">YES ❤️</button>
             <button id="noBtn">NO 💔</button>
         </div>
     </div>
 
+    <!-- FINAL -->
     <div id="final" class="hidden">
         <h1>She said YES 💍</h1>
         <p>From storms to forever.</p>
     </div>
+
 </div>
 
 <div class="hearts"></div>
